@@ -1,0 +1,39 @@
+# This clippys, docs, tests, builds.
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: "full"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Spell Check
+      uses: crate-ci/typos@master
+
+    - name: Install mdBook
+      run: cargo install mdbook
+
+    - name: Build
+      run: mdbook build
+
+    - name: Archive
+      uses: actions/upload-artifact@v3
+      with:
+        name: docs
+        path: docs

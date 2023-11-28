@@ -1,0 +1,15 @@
+[book]
+authors      = ["hinto-janai"]
+language     = "en"
+multilingual = false
+src          = "src"
+title        = "Malvarma"
+
+[build]
+build-dir = "docs"
+
+[output.html]
+default-theme        = "ayu"
+preferred-dark-theme = "ayu"
+git-repository-url   = "https://github.com/hinto-janai/malvarma"
+cname                = "malvarma.org"

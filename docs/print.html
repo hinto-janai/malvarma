@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Malvarma</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item expanded "><a href="before_we_start/before_we_start.html"><strong aria-hidden="true">2.</strong> ⛔️ Before we start</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="before_we_start/what_you_need.html"><strong aria-hidden="true">2.1.</strong> What you need</a></li><li class="chapter-item expanded "><a href="before_we_start/what_things_mean.html"><strong aria-hidden="true">2.2.</strong> What things mean</a></li></ol></li><li class="chapter-item expanded "><a href="cold_wallet/cold_wallet.html"><strong aria-hidden="true">3.</strong> ❄️ Cold wallet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cold_wallet/prepare_the_software.html"><strong aria-hidden="true">3.1.</strong> Prepare the software</a></li><li class="chapter-item expanded "><a href="cold_wallet/prepare_the_hardware.html"><strong aria-hidden="true">3.2.</strong> Prepare the hardware</a></li><li class="chapter-item expanded "><a href="cold_wallet/create_the_cold_wallet.html"><strong aria-hidden="true">3.3.</strong> Create the cold wallet</a></li><li class="chapter-item expanded "><a href="cold_wallet/create_the_view_wallet.html"><strong aria-hidden="true">3.4.</strong> Create the view wallet</a></li></ol></li><li class="chapter-item expanded "><a href="transactions/transactions.html"><strong aria-hidden="true">4.</strong> 💵 Transactions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="transactions/create_a_transaction.html"><strong aria-hidden="true">4.1.</strong> Create a transaction</a></li><li class="chapter-item expanded "><a href="transactions/sign_the_transaction.html"><strong aria-hidden="true">4.2.</strong> Sign the transaction</a></li><li class="chapter-item expanded "><a href="transactions/broadcast_the_transaction.html"><strong aria-hidden="true">4.3.</strong> Broadcast the transaction</a></li><li class="chapter-item expanded "><a href="transactions/outputs.html"><strong aria-hidden="true">4.4.</strong> Outputs</a></li></ol></li><li class="chapter-item expanded "><a href="maintenance/maintenance.html"><strong aria-hidden="true">5.</strong> 🔨 Maintenance</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="maintenance/upgrading_the_wallet.html"><strong aria-hidden="true">5.1.</strong> Upgrading the wallet</a></li><li class="chapter-item expanded "><a href="maintenance/restoring_the_cold_wallet.html"><strong aria-hidden="true">5.2.</strong> Restoring the cold wallet</a></li><li class="chapter-item expanded "><a href="maintenance/restoring_the_view_wallet.html"><strong aria-hidden="true">5.3.</strong> Restoring the view wallet</a></li></ol></li><li class="chapter-item expanded "><a href="optional/optional.html"><strong aria-hidden="true">6.</strong> ⚠️ "Optional"</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="optional/backup_the_cold_wallet.html"><strong aria-hidden="true">6.1.</strong> Backup the cold wallet</a></li><li class="chapter-item expanded "><a href="optional/physical_security.html"><strong aria-hidden="true">6.2.</strong> Physical security</a></li></ol></li><li class="chapter-item expanded "><a href="end.html"><strong aria-hidden="true">7.</strong> End</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Malvarma</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/hinto-janai/malvarma" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><img src="img/banner_1920_640.png" alt="banner" /></p>
+<p>Malvarma is a <a href="https://en.wikipedia.org/wiki/Cryptocurrency_wallet#Cold_storage">cold wallet</a> guide for <a href="https://getmonero.org">Monero</a>.</p>
+<hr />
+<p>This guide hand-holds you through:</p>
+<ol>
+<li>Creating an <a href="https://en.wikipedia.org/wiki/Air_gap_(networking)">air-gapped</a> computer</li>
+<li>Creating a cold/view Monero wallet pair</li>
+<li>Creating, signing, and broadcasting a cold Monero transaction</li>
+</ol>
+<p>The entire process can be finished anywhere from 1 hour to 1 day, depending on experience.</p>
+<hr />
+<p>Continue to the first step by clicking <code>&gt;</code> or selecting the next chapter: <a href="./before_we_start/before_we_start.html"><code>Before we start</code></a>.</p>
+<p>All chapters are viewable by clicking the top-left <code>☰</code> button.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-before-we-start"><a class="header" href="#-before-we-start">⛔️ Before we start</a></h1>
+<p>This guide is meant to be read from front-to-back, in order.</p>
+<p>There are steps that may not be applicable to you, if so, feel free to skip them.</p>
+<hr />
+<p>At the end of this guide, you will be in possession of an <a href="https://en.wikipedia.org/wiki/Air_gap_(networking)">air-gapped</a> computer.</p>
+<p>For the purposes of this guide, we focus on how to use that computer to create and sign offline Monero transactions, however, there are other practical usecases this computer could serve, e.g:</p>
+<ul>
+<li>Other offline cryptocurrency transaction signing</li>
+<li>Offline password vault (<a href="https://keepassxc.org">KeePassXC</a>, <a href="https://bitwarden.com">Bitwarden</a>, <a href="https://1password.com">1Password</a>, etc)</li>
+<li>Offline <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">OTP/2FA</a> generation</li>
+<li>Offline PGP message signing</li>
+</ul>
+<p>In short, this air-gapped computer is viable for storing any &quot;secret&quot; that would be better stored offline, and is not just limited to Monero.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-you-need"><a class="header" href="#what-you-need">What you need</a></h1>
+<ol>
+<li>Computer (Laptop, Desktop, SBC, etc)</li>
+<li>Data transfer medium (USB, SD Card, etc)</li>
+<li>Screwdriver</li>
+</ol>
+<hr />
+<p>This computer will never connect to the internet ever again, so make sure you okay with &quot;sacrificing&quot; it into a cold wallet.</p>
+<p>You will also need a computer <em>other</em> than this cold computer to act as your <code>view-only</code> wallet (perhaps the computer you're using to read this guide?). The security of this computer does not matter as much, as it will not be able to spend any funds.</p>
+<h2 id="-this-guide"><a class="header" href="#-this-guide">💻 This guide</a></h2>
+<p>This guide will assume you are using:</p>
+<ul>
+<li><strong>A laptop</strong> as your computer</li>
+<li><strong>Monero GUI</strong> as your wallet</li>
+<li><strong>Windows</strong> as your OS</li>
+</ul>
+<p>The instructions will differ with other types of computers/wallets/OS's, but they are <em>mostly</em> the same.</p>
+<p>In our case - we'll be using the cheapest 2nd-hand laptop we could quickly find ($80).</p>
+<p><img src="before_we_start/../img/what_you_need.jpg" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-things-mean"><a class="header" href="#what-things-mean">What things mean</a></h1>
+<p>This guide can be used without reading this page, skip if desired.</p>
+<hr />
+<p>Following this guide may be easier if you have basic knowledge of some things.</p>
+<p>The following are simplified explanations of some important concepts related to cold wallets.</p>
+<h2 id="-air-gapped"><a class="header" href="#-air-gapped">🌪 Air-gapped</a></h2>
+<p>An <a href="https://en.wikipedia.org/wiki/Air_gap_(networking)">air-gapped</a> device is a device that is isolated from any conventional network (internet, LAN, etc) via software and/or physical means.</p>
+<p>Note that, while an air-gapped device is incapable of networking, it is still capable of 2-way data transfer via USB, SD Card, etc.</p>
+<p>Hardware wallets such as the <a href="https://trezor.io/trezor-model-one">Trezor One</a> do not have any software capabilities nor any <a href="https://github.com/trezor/trezor-hardware/blob/master/electronics/trezor_one/trezor_v1.1.sch.png">physical circuitry</a> that allow for network interfacing, thus it could be considered an air-gapped device. All data transfers (including firmware changes) occur via USB.</p>
+<p>Similarly, a computer lacking the physical hardware to network (WiFi/Bluetooth chip and/or Ethernet port) would also be considered air-gapped.</p>
+<p>&quot;Cold&quot; is usually used as a synonym for air-gapped.</p>
+<h2 id="-spendview-key"><a class="header" href="#-spendview-key">🔑 Spend/View key</a></h2>
+<p>Monero wallets are made up of 4 keys:</p>
+<ul>
+<li>Private spend key</li>
+<li>Private view key</li>
+<li>Public spend key</li>
+<li>Public view key</li>
+</ul>
+<p>What each of these are used for is not too important for the purposes of this guide.</p>
+<p>The important thing to take away is that the <strong>private spend key</strong> is the only key that can spend funds.</p>
+<p>When you create a &quot;view-only&quot; wallet in Monero, it is a wallet that has access to all keys <strong>except the private spend key</strong>, thus it cannot spend funds (but it can see incoming funds just fine).</p>
+<h2 id="-coldhot-wallet"><a class="header" href="#-coldhot-wallet">❄️🔥 Cold/Hot wallet</a></h2>
+<p>A <code>cold</code> wallet is a wallet that employs the air-gapped techniques described above and is not connected to any network.</p>
+<p>A <code>hot</code> wallet is a wallet that <em>is</em> connected to a network in some form or another.</p>
+<h2 id="-signing-a-transaction"><a class="header" href="#-signing-a-transaction">✒️ Signing a transaction</a></h2>
+<p>When you send Monero, you are authorizing a transaction with your <strong>private spend key</strong>.</p>
+<p>Like a check:</p>
+<ul>
+<li>You see <strong>who</strong> it is going to</li>
+<li>You see <strong>how much</strong> money is being sent</li>
+</ul>
+<p>All that is left is for you (your wallet) to authorize the transaction by &quot;signing&quot; it.</p>
+<p>Just like a check with a name and amount, a transaction can be created relatively easily - but without your signature it is not a &quot;real&quot; transaction.</p>
+<h2 id="-key-images--outputs"><a class="header" href="#-key-images--outputs">💽 Key Images &amp; Outputs</a></h2>
+<p>Again, what these things are is not too important for the purposes of this guide.</p>
+<p>The important thing to take away is that the these two things (key images &amp; outputs) are additional pieces of data that must be carried over from <code>cold &lt;-&gt; view</code> wallets in order for:</p>
+<ul>
+<li>The <code>cold</code> wallet to see an updated balance</li>
+<li>The <code>view</code> wallet to see outgoing funds</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-cold-wallet"><a class="header" href="#-cold-wallet">❄️ Cold wallet</a></h1>
+<p>The first step: prepare the computer to be a viable cold wallet, and then create the wallet itself.</p>
+<p>This chapter lays out the instructions for:</p>
+<ul>
+<li>Correctly preparing your software</li>
+<li>Correctly preparing your hardware</li>
+<li>Creating your cold/view wallet pair for Monero</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="prepare-the-software"><a class="header" href="#prepare-the-software">Prepare the software</a></h1>
+<p>In the next few steps we'll be taking our computer offline <em>forever</em>, so we'll be making sure that we have <em>everything</em> we need installed here, beforehand.</p>
+<p>Most notably, we need wallet software - we'll be using <a href="https://www.getmonero.org/downloads">Monero GUI</a> in this guide.</p>
+<p>Other wallets that support offline transactions can be used (e.g Monero CLI) however the steps may slightly differ.</p>
+<hr />
+<h2 id="-install"><a class="header" href="#-install">💾 Install</a></h2>
+<p>Make sure your wallet software is installed on your cold device.</p>
+<p>If you are using the cold device for purposes <a href="cold_wallet/../before_we_start/before_we_start.html">in addition to Monero</a>, you should make that software is installed as well.</p>
+<p>If <a href="cold_wallet/../optional/physical_security.html">full disk encryption</a> is desired, that step should be done before any of this as well (you cannot easily do this after the fact).</p>
+<p><img src="cold_wallet/../img/prepare_the_software_1.jpg" alt="image" /></p>
+<h2 id="-verify"><a class="header" href="#-verify">🔏 Verify</a></h2>
+<p>While this last step is technically optional, you are strongly encouraged to verify your wallet's authenticity before usage.</p>
+<p>There are steps specific to Monero GUI <a href="https://web.getmonero.org/resources/user-guides/verification-windows-beginner.html">here</a>. More details can be found on the <a href="https://getmonero.org/downloads">downloads</a> page.</p>
+<p><img src="cold_wallet/../img/prepare_the_software_2.jpg" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="prepare-the-hardware"><a class="header" href="#prepare-the-hardware">Prepare the hardware</a></h1>
+<p>Now that all the software that you'll need is installed, this step will prepare the hardware such that it physically cannot connect to any network (at least, wirelessly).</p>
+<p>If this step is not applicable to your hardware (Desktop, SBC, etc) you can skip this step, although be aware that your computer will still have the <em>physical</em> ability to create internet connections.</p>
+<p>In that case, using a motherboard or SBC without an integrated WiFi and/or Bluetooth chip would be equivalent to this step.</p>
+<h2 id="-goodbye-wifi"><a class="header" href="#-goodbye-wifi">👋 Goodbye, WiFi</a></h2>
+<p>We're going to be removing the WiFi/Bluetooth chip from the example laptop.</p>
+<p>Be sure to turn off the laptop and unplug any power.</p>
+<p>Most cheap laptops like this will have 9-12 screws on the back, yours may differ slightly, but in the end it's the same - unscrew the back cover and open it up.</p>
+<p>After unscrewing, there are most likely plastic clips locking the back cover into place, so you will have to pry the cover open - don't be scared!</p>
+<p><img src="cold_wallet/../img/prepare_the_hardware_1.jpg" alt="image" /></p>
+<p>Almost all laptops like this have the same general internal structure.</p>
+<p><img src="cold_wallet/../img/prepare_the_hardware_2.jpg" alt="image" /></p>
+<p>Although, we are only interested in the WiFi/Bluetooth chip.</p>
+<p>This is almost always a <strong>single, square-shaped chip - located in the top-left corner</strong>.</p>
+<p>Most of these chips are produced by <code>Intel</code>.</p>
+<p><img src="cold_wallet/../img/prepare_the_hardware_3.jpg" alt="image" /></p>
+<p>There will be 2 unique-looking wires connected to the chip.</p>
+<p><img src="cold_wallet/../img/prepare_the_hardware_4.jpg" alt="image" /></p>
+<ol>
+<li>Unplug the wires</li>
+<li>Unscrew the (usually single) screw holding the chip in place</li>
+<li>Simply pull out the chip</li>
+</ol>
+<p><img src="cold_wallet/../img/prepare_the_hardware_5.jpg" alt="image" /></p>
+<p>Now your device is physically incapable of making internet/bluetooth connections. <sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<p>You can now close the back cover, and do whatever you want with the chip.</p>
+<p>Congratulations, you now have an air-gapped laptop.</p>
+<p><img src="cold_wallet/../img/prepare_the_hardware_6.jpg" alt="image" /></p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>USB WiFi/Bluetooth adapters exist, your laptop may still have an ethernet port, etc - this is addressed in <a href="cold_wallet/../optional/physical_security.html">Physical security</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="create-the-cold-wallet"><a class="header" href="#create-the-cold-wallet">Create the cold wallet</a></h1>
+<p>After booting your newly created air-gapped computer, you should confirm that it <em>really</em> cannot connect to any network before proceeding.</p>
+<hr />
+<p>After confirming your machine is cold, we'll be going through the standard procedure of making a wallet with Monero GUI, just follow the steps.</p>
+<p><img src="cold_wallet/../img/create_the_cold_wallet_1.jpg" alt="image" /></p>
+<p>When selecting a mode, be sure to select <code>Advanced mode</code>.</p>
+<p>This must be selected to enable certain offline transaction functionality.</p>
+<p><img src="cold_wallet/../img/create_the_cold_wallet_2.jpg" alt="image" /></p>
+<p>Now, create your new cold wallet.</p>
+<p><img src="cold_wallet/../img/create_the_cold_wallet_3.jpg" alt="image" /></p>
+<p>Take note of where your wallet is being saved, we'll be looking here later.</p>
+<p><img src="cold_wallet/../img/create_the_cold_wallet_4.jpg" alt="image" /></p>
+<p>You can temporarily write down your seed on paper, but consider reading <a href="cold_wallet/../optional/backup_the_cold_wallet.html"><code>Backup the cold wallet</code></a> to see how to backup your wallet digitally.</p>
+<p>The gist is that the seed should never see the internet or any other device unencrypted.</p>
+<p><img src="cold_wallet/../img/create_the_cold_wallet_5.jpg" alt="image" /></p>
+<p>Optionally create a wallet password.</p>
+<p>Depending on your <a href="https://en.wikipedia.org/wiki/Threat_model">threat model</a>, a password may not be necessary as this computer will be offline forever. The likelihood of you losing this password may be higher than a successful attack occurring to an air-gapped machine.</p>
+<p><img src="cold_wallet/../img/create_the_cold_wallet_6.jpg" alt="image" /></p>
+<p>When selecting a daemon, select <code>Connect to a remote node</code> and do not add anything.</p>
+<p>This wallet is offline, so we'll never be starting a Monero node.</p>
+<p><img src="cold_wallet/../img/create_the_cold_wallet_7.jpg" alt="image" /></p>
+<p>Confirm your wallet looks correct, then create!</p>
+<p><img src="cold_wallet/../img/create_the_cold_wallet_8.jpg" alt="image" /></p>
+<p>Now, we have a cold wallet on a cold computer - <strong>this wallet must never leave this device</strong> (at least, unencrypted).</p>
+<p>The QR Code and Monero address shown would be your cold wallets address.</p>
+<p>This is the address you can send to people when you want to receive Monero (or, a secondary address via <code>Create new address</code>).</p>
+<p>This wallet can <strong>sign</strong> transactions, however, since it is offline, it cannot actually send them to the Monero network to be processed. It cannot even create them in the first place.</p>
+<p>To address this, let's continue to the next step: <a href="cold_wallet/./create_the_view_wallet.html"><code>Create the view wallet</code></a>.</p>
+<p><img src="cold_wallet/../img/create_the_cold_wallet_9.jpg" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="create-the-view-wallet"><a class="header" href="#create-the-view-wallet">Create the view wallet</a></h1>
+<p>Now that you've created your cold wallet, you're now going to create a corresponding <code>view-only</code> wallet. This wallet is linked to your cold wallet (same address), but it has some notable properties.</p>
+<p>This <code>view-only</code> wallet can:</p>
+<ul>
+<li>See incoming transactions</li>
+<li>Create transactions</li>
+</ul>
+<p>but is <strong>not</strong> allowed to sign transactions (aka, spend funds).</p>
+<p>This <code>view-only</code> wallet can be placed on a &quot;hot&quot; machine, and you can be more relaxed with it, as it cannot spend funds.</p>
+<hr />
+<p>In your cold wallet, goto:</p>
+<ul>
+<li>Settings</li>
+<li>Wallet</li>
+</ul>
+<p>and click <code>Create a view-only wallet</code>.</p>
+<p><img src="cold_wallet/../img/create_the_view_wallet_1.jpg" alt="image" /></p>
+<p>Take note of where the new <code>view-only</code> wallet is saved.</p>
+<p><img src="cold_wallet/../img/create_the_view_wallet_2.jpg" alt="image" /></p>
+<p>Go to the location of where your <code>view-only</code> wallet is saved.</p>
+<p>On Windows, by default it is:</p>
+<pre><code>C:\Users\COLD_COMPUTER\Documents\Monero\wallets\YOUR_WALLET\YOUR_WALLET_viewonly
+</code></pre>
+<p>Now, plug in your data transfer medium of choice (USB, SD Card, etc), and copy the <strong>view-only</strong> wallet over.</p>
+<p><strong>Only the view-only wallet.</strong></p>
+<p>There will be a normal file (<code>malvarma_viewonly</code> in the picture) and a corresponding <code>.keys</code> version, only the <code>.keys</code> version is required but you can copy both.</p>
+<p><img src="cold_wallet/../img/create_the_view_wallet_3.jpg" alt="image" /></p>
+<hr />
+<p>Stepping away from the cold computer - we're now switching over to your <code>view-only</code> computer (maybe the computer you're using to read this guide?)</p>
+<p>Plug in your data transfer medium of choice, import the <code>view-only</code> wallet files.</p>
+<p><img src="cold_wallet/../img/create_the_view_wallet_4.jpg" alt="image" /></p>
+<p>The <code>view-only</code> wallet files should be placed where your Monero GUI looks for wallet files, again by default this is in:</p>
+<pre><code>C:\Users\HOT_COMPUTER\Documents\Monero\wallets\YOUR_WALLET
+</code></pre>
+<p>If you don't know where Monero GUI looks for wallet files, that's fine, it will allow you to select them.</p>
+<hr />
+<p>Re-create the <code>view-only</code> wallet by selecting <code>Open a wallet from file</code>.</p>
+<p><img src="cold_wallet/../img/create_the_view_wallet_5.jpg" alt="image" /></p>
+<p>There's our <code>view-only</code> wallet, select it and open.</p>
+<p><img src="cold_wallet/../img/create_the_view_wallet_6.jpg" alt="image" /></p>
+<p>You now have a <code>view-only</code> wallet version of your cold wallet!</p>
+<p>Make sure the address is the same as your cold wallet.</p>
+<p>Note that in the top-left corner, a <code>View Only</code> marker appears.</p>
+<p>From now on, if you're ever confused on which wallet we're dealing with in the guide, look for the <code>View Only</code> marker.</p>
+<hr />
+<p>To view funds sent to this wallet, you'll be syncing this <code>view-only</code> wallet just like you would for a regular wallet.</p>
+<p><img src="cold_wallet/../img/create_the_view_wallet_7.jpg" alt="image" /></p>
+<p>Fast forward some amount of time.</p>
+<p>We've received some funds, and we can see it after syncing the <code>view-only</code> wallet.</p>
+<p>But, we can't spend it.</p>
+<p>To address this, let's continue to the next chapter: <a href="cold_wallet/../transactions/transactions.html"><code>Transactions</code></a>.</p>
+<p><img src="cold_wallet/../img/create_the_view_wallet_8.jpg" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-transactions"><a class="header" href="#-transactions">💵 Transactions</a></h1>
+<p>You've now:</p>
+<ul>
+<li>Created an air-gapped device</li>
+<li>Created a cold Monero wallet</li>
+<li>Created a <code>view-only</code> wallet</li>
+<li>Have received funds</li>
+</ul>
+<p>It's time to create, sign, and broadcast some transactions.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="create-a-transaction"><a class="header" href="#create-a-transaction">Create a transaction</a></h1>
+<p>From your <code>view-only</code> wallet, you can send Monero like normal, but instead of <code>Send -&gt;</code>, you'll be using the <code>Offline transaction signing</code> feature.</p>
+<hr />
+<p>Goto:</p>
+<ul>
+<li><code>Send</code> tab</li>
+<li>Advanced options</li>
+<li>Offline transaction signing</li>
+<li>Click <code>Submit</code></li>
+</ul>
+<p><img src="transactions/../img/create_a_transaction_1.jpg" alt="image" /></p>
+<p>This will not send funds, as this <code>view-only</code> wallet is not allowed to do that.</p>
+<p>It will however, create a unsigned transaction file - a file that only needs your cold wallet's signature to be ready to go.</p>
+<p>Confirm the amount you're sending, who you're sending to and <code>Save as file</code> (you may be responsible for naming of the file and where it is saved).</p>
+<p><img src="transactions/../img/create_a_transaction_2.jpg" alt="image" /></p>
+<p>Take note of where this file is saved.</p>
+<p>Transfer this unsigned transaction file to your data transfer medium (USB, SD Card, etc).</p>
+<p>We're now ready to <a href="transactions/./sign_the_transaction.html"><code>Sign the transaction</code></a>.</p>
+<p><img src="transactions/../img/create_a_transaction_3.jpg" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sign-the-transaction"><a class="header" href="#sign-the-transaction">Sign the transaction</a></h1>
+<p>We'll be signing (authorizing) the transaction created in the previous step.</p>
+<hr />
+<p>We're now back on the cold computer.</p>
+<p>After plugging in your data transfer medium (USB, SD Card, etc) into your cold computer, goto:</p>
+<ul>
+<li><code>Send</code> tab</li>
+<li>Advanced options</li>
+<li>Offline transaction signing</li>
+<li>Click <code>Sign (offline)</code></li>
+</ul>
+<p><img src="transactions/../img/sign_the_transaction_1.jpg" alt="image" /></p>
+<p>Select the transaction file created in the last step.</p>
+<p>In this example, the file is named <code>cold_monero_transaction</code> but in your case, it will be whatever you named it.</p>
+<p><img src="transactions/../img/sign_the_transaction_2.jpg" alt="image" /></p>
+<p>Confirm the details of this transaction.</p>
+<p>There may be unknown addresses shown due to <a href="https://www.getmonero.org/resources/moneropedia/stealthaddress.html">stealth addresses</a> and <a href="https://www.getmonero.org/resources/moneropedia/change.html">change addresses</a> but the address you are sending to should be specified.</p>
+<p>In our case, we are indeed sending <code>0.49 XMR</code> to <code>44hinto...15ZPHmK</code>.</p>
+<p><img src="transactions/../img/sign_the_transaction_3.jpg" alt="image" /></p>
+<p>After signing (authorizing) the transaction, there will be <code>_signed</code> and <code>_signed_keyImages</code> versions of your transaction file.</p>
+<p>The <code>_signed</code> file is a &quot;ready-to-go&quot; transaction that can be broadcasted and successfully accepted by the Monero network, like a signed check with a name and amount.</p>
+<p>Copy both of these to your data transfer medium (USB, SD Card, etc) and move onto the next step, <a href="transactions/./broadcast_the_transaction.html"><code>Broadcast the transaction</code></a>.</p>
+<p><img src="transactions/../img/sign_the_transaction_4.jpg" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="broadcast-the-transaction"><a class="header" href="#broadcast-the-transaction">Broadcast the transaction</a></h1>
+<p>We'll now be broadcasting our transaction we created in the previous step.</p>
+<p>It is signed, thus the network knows that we &quot;authorized&quot; it, and will accept it like a normal transaction.</p>
+<hr />
+<p>Back on the <code>view-only</code> wallet.</p>
+<p>Goto:</p>
+<ul>
+<li><code>Send</code> tab</li>
+<li>Advanced options</li>
+<li>Offline transaction signing</li>
+<li>Click <code>Submit</code></li>
+</ul>
+<p><img src="transactions/../img/broadcast_the_transaction_1.jpg" alt="image" /></p>
+<p>Find the <code>_signed</code> version of your transaction on your data transfer medium, and select it.</p>
+<p>If the <code>signed_keyImages</code> file is in the same folder, Monero GUI will automatically import that as well.</p>
+<p>If it is not, you will have to manually use the:</p>
+<ul>
+<li><code>Send</code> tab</li>
+<li>Advanced options</li>
+<li>Key images</li>
+<li><code>Import</code></li>
+</ul>
+<p>feature to import the file. This is required.</p>
+<p><img src="transactions/../img/broadcast_the_transaction_2.jpg" alt="image" /></p>
+<p>The wallet has accepted the signed transaction file, and our money was successfully sent!</p>
+<p><img src="transactions/../img/broadcast_the_transaction_3.jpg" alt="image" /></p>
+<p>We can see in our <code>view-only</code> wallet that we've sent the money to <code>44hintoF...z7Vi9CYW</code>.</p>
+<p><img src="transactions/../img/broadcast_the_transaction_4.jpg" alt="image" /></p>
+<p>Sometime later, the actual <code>44hintoF...z7Vi9CYW</code> wallet will receive the money, as seen below.</p>
+<p>Congratulations, you've successfully created, signed, and broadcasted a cold Monero transaction!</p>
+<p>There's only 1 step left: <a href="transactions/outputs.html"><code>Outputs</code></a>.</p>
+<p><img src="transactions/../img/broadcast_the_transaction_5.jpg" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="outputs"><a class="header" href="#outputs">Outputs</a></h1>
+<p>Your cold wallet is not connected to any network, so it cannot update its current balance automatically.</p>
+<p>However, your <code>view-only</code> wallet at this point in the guide <em>does</em> know the true balance.</p>
+<p>We'll be transferring the <code>outputs</code> file from our <code>view-only</code> wallet -&gt; to our cold wallet.</p>
+<p>This will update the cold wallet so that it knows how much Monero it actually has.</p>
+<p><strong>This is a required step</strong> - your cold wallet requires this information.</p>
+<hr />
+<p>In your <code>view-only</code> wallet, goto:</p>
+<ul>
+<li><code>Send</code> tab</li>
+<li>Advanced options</li>
+<li>Outputs</li>
+<li>Click <code>Export</code></li>
+</ul>
+<p><img src="transactions/../img/outputs_1.jpg" alt="image" /></p>
+<p>The output file will be saved in your location of choice.</p>
+<p>You can save it directly to your data transfer medium (USB, SD Card, etc).</p>
+<p><img src="transactions/../img/outputs_2.jpg" alt="image" /></p>
+<p>On the cold wallet, plug-in your data transfer medium, and goto:</p>
+<ul>
+<li><code>Send</code> tab</li>
+<li>Advanced options</li>
+<li>Outputs</li>
+<li>Click <code>Import</code></li>
+</ul>
+<p><img src="transactions/../img/outputs_3.jpg" alt="image" /></p>
+<p>Here, select the output file you created in the last step.</p>
+<p>After this is done, your cold wallet's balance will be updated and will be able to sign future transactions.</p>
+<p>Consider deleting all the non-wallet files created up until this point (transaction, signed, key image, output) as they are no longer required.</p>
+<p><img src="transactions/../img/outputs_4.jpg" alt="image" /></p>
+<h2 id="end"><a class="header" href="#end">End?</a></h2>
+<p>This is the end of the main part of the guide - everything beyond this is technically optional, although it's recommended to continue reading.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-maintenance"><a class="header" href="#-maintenance">🔨 Maintenance</a></h1>
+<p>This cold/view-only wallet setup will require some small maintenance over time.</p>
+<p>The following steps will aid you through some common processes.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="upgrading-the-wallet"><a class="header" href="#upgrading-the-wallet">Upgrading the wallet</a></h1>
+<p>Sometimes, Monero goes through backwards-incompatible <a href="https://www.getmonero.org/2022/04/20/network-upgrade-july-2022.html">hard-fork upgrades</a>.</p>
+<p>Sometimes, wallets receive important security updates.</p>
+<p>In both of these cases, you will need to upgrade your cold wallet software.</p>
+<hr />
+<p>As your air-gapped machine cannot connect to any network, you'll be using the same method you have used throughout this guide to upgrade your cold wallet: <strong>the data transfer medium</strong>.</p>
+<p>Go through the steps of <a href="maintenance/../cold_wallet/prepare_the_software.html"><code>Prepare the software</code></a> again, this time, transferring the new wallet software to your data transfer medium, then that to your cold wallet.</p>
+<p>Replace the wallet software, and now you have an updated cold wallet.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="restoring-the-cold-wallet"><a class="header" href="#restoring-the-cold-wallet">Restoring the cold wallet</a></h1>
+<p>If you are restoring your cold wallet on a new machine, you must follow the steps in <a href="maintenance/../transactions/outputs.html"><code>Outputs</code></a> once again, such that your cold wallet can see true amount of funds it can spend.</p>
+<p>Simply re-follow the steps and your cold wallet will be ready to sign future transactions.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="restoring-the-view-wallet"><a class="header" href="#restoring-the-view-wallet">Restoring the view wallet</a></h1>
+<p>If you are restoring your <code>view-only</code> wallet on a new machine, you must import the <code>Key images</code> briefly mentioned in <a href="maintenance/../transactions/broadcast_the_transaction.html"><code>Broadcast the transaction</code></a> once again, such that your <code>view-only</code> wallet can see the amount of funds it <em>has already</em> spent (thus, an updated balance).</p>
+<hr />
+<p>In your cold wallet, goto:</p>
+<ul>
+<li><code>Send</code> tab</li>
+<li>Advanced options</li>
+<li>Key images</li>
+<li>Click <code>Export</code></li>
+</ul>
+<p>You will be asked to pick a location to save this <code>Key images</code> file.</p>
+<p>Transfer the <code>Key images</code> file to your data transfer medium.</p>
+<p><img src="maintenance/../img/restoring_the_view_wallet_1.jpg" alt="image" /></p>
+<p>After plugging in your data transfer medium into your <code>view-only</code> machine, goto:</p>
+<ul>
+<li><code>Send</code> tab</li>
+<li>Advanced options</li>
+<li>Key images</li>
+<li>Click <code>Import</code></li>
+</ul>
+<p>and select the <code>Key images</code> file you just created.</p>
+<p>Your <code>view-only</code> wallet should now see an updated balance.</p>
+<p><img src="maintenance/../img/restoring_the_view_wallet_2.jpg" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-optional"><a class="header" href="#-optional">⚠️ &quot;Optional&quot;</a></h1>
+<p>The following steps are technically optional.</p>
+<p>However, you are strongly encouraged to follow them.</p>
+<p>Not doing so may lead to the loss of your cold wallet and funds.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="backup-the-cold-wallet"><a class="header" href="#backup-the-cold-wallet">Backup the cold wallet</a></h1>
+<p>Following this guide, your cold wallet only exists on a single, physical machine.</p>
+<p>This is risky - if that machine were to to fail, your cold wallet would be gone with it.</p>
+<hr />
+<p>It is encouraged to backup your cold wallet in some type of way, whether this means saving your seed, or the file itself.</p>
+<p>The many ways to do this are outside the scope of this guide, but they can easily be found by searching around.</p>
+<p><strong>Your seed/cold wallet should never leave your air-gapped computer unencrypted</strong>.</p>
+<p>Use <a href="https://www.gnupg.org">well-known</a> and <a href="https://www.veracrypt.fr">trusted</a> encryption software to encrypt your wallet before transferring it to a machine connected to the internet or any other network. Even Monero wallets themselves have built-in password and encryption schemes, use them if needed.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="physical-security"><a class="header" href="#physical-security">Physical security</a></h1>
+<h2 id="-disable-auto-run"><a class="header" href="#-disable-auto-run">❌ Disable auto-run</a></h2>
+<p>Many OS's (including Windows, Ubuntu) have an &quot;auto-run&quot; feature enabled by default.</p>
+<p>This allows data transfer devices such as USB &amp; SD cards to automatically run executable files when plugged in.</p>
+<p>There is relatively rare malware that can abuse this - in this guides case, it is one of the few remaining ways your air-gapped machine could be compromised.</p>
+<p>This is usually as simple as unclicking a toggle box, <a href="https://www.nucleustechnologies.com/blog/three-methods-to-disable-autorun-in-windows-10">see here for Windows</a> and <a href="https://wiki.ubuntu.com/autorun">here for Ubuntu (or any Linux using GNOME)</a>.</p>
+<h2 id="-configure-the-bios"><a class="header" href="#-configure-the-bios">📝 Configure the BIOS</a></h2>
+<p>Your air-gapped machine's BIOS most likely has options to disable some hardware components.</p>
+<p>This is a much more practical way to &quot;disable&quot; hardware compared to physically ripping out an ethernet jack.</p>
+<p>You can disable any I/O that will no longer be used, e.g Ethernet, other USB ports, etc.</p>
+<p><img src="optional/../img/configure_the_bios.jpg" alt="image" /></p>
+<h2 id="-disk-encryption"><a class="header" href="#-disk-encryption">🔐 Disk encryption</a></h2>
+<p>At-rest disk encryption on your air-gapped machine defends against physical compromises (depending on your password/key's strength).</p>
+<p>As suggested in <a href="optional/../cold_wallet/create_the_cold_wallet.html"><code>Create the cold wallet</code></a>, the likelihood of you losing the encryption password should be weighted against the likelihood of your machine actually being physically compromised, you <em>most likely</em> do not need this step, but if you do, you know who you are.</p>
+<hr />
+<p>This step must be done before creating your air-gapped machine, before <a href="optional/../cold_wallet/prepare_the_software.html"><code>Prepare the software</code></a>.</p>
+<p><a href="https://support.microsoft.com/en-us/windows/turn-on-device-encryption-0c453637-bc88-5f74-5105-741561aae838">See here for Windows</a> and <a href="https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">here for Linux</a>.</p>
+<p>The process for Linux will differ slightly per distribution, but LUKS is the scheme used in most setups.</p>
+<h2 id="-misc-ports"><a class="header" href="#-misc-ports">🔌 Misc ports</a></h2>
+<p>Your air-gapped machine may or may not have usable USB ports (that <code>USB WiFi</code> dongles could be plugged into) and/or Ethernet ports.</p>
+<p><strong>Do not plug anything into them.</strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="end-1"><a class="header" href="#end-1">End</a></h1>
+<h3 id="congratulations-on-creating-an-air-gapped-device-and-sending-cold-monero-"><a class="header" href="#congratulations-on-creating-an-air-gapped-device-and-sending-cold-monero-">Congratulations on creating an air-gapped device and sending cold Monero 🎉</a></h3>
+<p>To send more transactions, repeat the steps in the <a href="../transactions/transactions.html"><code>Transactions</code></a> chapter.</p>
+</br>
+<hr />
+</br>
+</br>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>Last updated</td><td><code>2023-11-30</code> <code>1701377764</code></td></tr>
+<tr><td>Monero GUI version</td><td><code>v0.18.3.1</code> <code>bea3032df9b1fc59a7aa0a3489d583b389481cfe</code></td></tr>
+<tr><td>Source</td><td><a href="https://github.com/hinto-janai/malvarma">https://github.com/hinto-janai/malvarma</a></td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
