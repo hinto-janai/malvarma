@@ -234,15 +234,6 @@ There are steps that may not be applicable to you, if so, feel free to skip them
 <h2 id="-coldhot-wallet"><a class="header" href="#-coldhot-wallet">❄️🔥 Cold/Hot wallet</a></h2>
 <p>A <code>cold</code> wallet is a wallet that employs the air-gapped techniques described above and is not connected to any network.</p>
 <p>A <code>hot</code> wallet is a wallet that <em>is</em> connected to a network in some form or another.</p>
-<h2 id="-signing-a-transaction"><a class="header" href="#-signing-a-transaction">✒️ Signing a transaction</a></h2>
-<p>When you send Monero, you are authorizing a transaction with your <strong>private spend key</strong>.</p>
-<p>Like a check:</p>
-<ul>
-<li>You see <strong>who</strong> it is going to</li>
-<li>You see <strong>how much</strong> money is being sent</li>
-</ul>
-<p>All that is left is for you (your wallet) to authorize the transaction by &quot;signing&quot; it.</p>
-<p>Just like a check with a name and amount, a transaction can be created relatively easily - but without your signature it is not a &quot;real&quot; transaction.</p>
 <h2 id="-spendview-key"><a class="header" href="#-spendview-key">🔑 Spend/View key</a></h2>
 <p>Monero wallets are made up of 4 keys:</p>
 <ul>
@@ -254,6 +245,15 @@ There are steps that may not be applicable to you, if so, feel free to skip them
 <p>What each of these are used for is not too important for the purposes of this guide.</p>
 <p>The important thing to take away is that the <strong>private spend key</strong> is the only key that can spend funds.</p>
 <p>When you create a &quot;view-only&quot; wallet in Monero, it is a wallet that has access to all keys <strong>except the private spend key</strong>, thus it cannot spend funds (but it can see incoming funds just fine).</p>
+<h2 id="-signing-a-transaction"><a class="header" href="#-signing-a-transaction">✒️ Signing a transaction</a></h2>
+<p>When you send Monero, you are authorizing a transaction with your <strong>private spend key</strong>.</p>
+<p>Like a check:</p>
+<ul>
+<li>You see <strong>who</strong> it is going to</li>
+<li>You see <strong>how much</strong> money is being sent</li>
+</ul>
+<p>All that is left is for you (your wallet) to authorize the transaction by &quot;signing&quot; it.</p>
+<p>Just like a check with a name and amount, a transaction can be created relatively easily - but without your signature it is not a &quot;real&quot; transaction.</p>
 <h2 id="-key-images--outputs"><a class="header" href="#-key-images--outputs">💽 Key Images &amp; Outputs</a></h2>
 <p>Again, what these things are is not too important for the purposes of this guide.</p>
 <p>The important thing to take away is that the these two things (key images &amp; outputs) are additional pieces of data that must be carried over from <code>cold &lt;-&gt; view</code> wallets in order for:</p>
@@ -276,7 +276,7 @@ There are steps that may not be applicable to you, if so, feel free to skip them
 <hr />
 <h2 id="-install"><a class="header" href="#-install">💾 Install</a></h2>
 <p style="background:rgba(255,0,0,0.25);padding:0.75em;">
-<strong>Note:</strong> if <a href="cold_wallet/../optional/physical_security.html#-disk-encryption">full disk encryption</a> is desired, that step should be done before any of this, as it cannot easily done after the fact.
+<strong>Note:</strong> if <a href="cold_wallet/../optional/physical_security.html#-disk-encryption">full disk encryption</a> is desired, that step should be done before any of this, as it cannot easily be done after the fact.
 </p>
 <p>Make sure your wallet software is installed on your cold device.</p>
 <p>If you are using the cold device for purposes <a href="cold_wallet/../before_we_start/before_we_start.html">in addition to Monero</a>, you should make that software is installed as well.</p>
@@ -625,7 +625,7 @@ Be sure to only recover your cold wallet on a properly air-gapped device.
 </br>
 </br>
 <div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
-<tr><td>Last updated</td><td><code>2023-12-01</code> <code>1701455170</code></td></tr>
+<tr><td>Last updated</td><td><code>2023-12-01</code> <code>1701455539</code></td></tr>
 <tr><td>Monero GUI version</td><td><code>v0.18.3.1</code> <code>bea3032df9b1fc59a7aa0a3489d583b389481cfe</code></td></tr>
 <tr><td>Source</td><td><a href="https://github.com/hinto-janai/malvarma">https://github.com/hinto-janai/malvarma</a></td></tr>
 </tbody></table>

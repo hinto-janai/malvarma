@@ -183,15 +183,6 @@
 <h2 id="-coldhot-wallet"><a class="header" href="#-coldhot-wallet">❄️🔥 Cold/Hot wallet</a></h2>
 <p>A <code>cold</code> wallet is a wallet that employs the air-gapped techniques described above and is not connected to any network.</p>
 <p>A <code>hot</code> wallet is a wallet that <em>is</em> connected to a network in some form or another.</p>
-<h2 id="-signing-a-transaction"><a class="header" href="#-signing-a-transaction">✒️ Signing a transaction</a></h2>
-<p>When you send Monero, you are authorizing a transaction with your <strong>private spend key</strong>.</p>
-<p>Like a check:</p>
-<ul>
-<li>You see <strong>who</strong> it is going to</li>
-<li>You see <strong>how much</strong> money is being sent</li>
-</ul>
-<p>All that is left is for you (your wallet) to authorize the transaction by &quot;signing&quot; it.</p>
-<p>Just like a check with a name and amount, a transaction can be created relatively easily - but without your signature it is not a &quot;real&quot; transaction.</p>
 <h2 id="-spendview-key"><a class="header" href="#-spendview-key">🔑 Spend/View key</a></h2>
 <p>Monero wallets are made up of 4 keys:</p>
 <ul>
@@ -203,6 +194,15 @@
 <p>What each of these are used for is not too important for the purposes of this guide.</p>
 <p>The important thing to take away is that the <strong>private spend key</strong> is the only key that can spend funds.</p>
 <p>When you create a &quot;view-only&quot; wallet in Monero, it is a wallet that has access to all keys <strong>except the private spend key</strong>, thus it cannot spend funds (but it can see incoming funds just fine).</p>
+<h2 id="-signing-a-transaction"><a class="header" href="#-signing-a-transaction">✒️ Signing a transaction</a></h2>
+<p>When you send Monero, you are authorizing a transaction with your <strong>private spend key</strong>.</p>
+<p>Like a check:</p>
+<ul>
+<li>You see <strong>who</strong> it is going to</li>
+<li>You see <strong>how much</strong> money is being sent</li>
+</ul>
+<p>All that is left is for you (your wallet) to authorize the transaction by &quot;signing&quot; it.</p>
+<p>Just like a check with a name and amount, a transaction can be created relatively easily - but without your signature it is not a &quot;real&quot; transaction.</p>
 <h2 id="-key-images--outputs"><a class="header" href="#-key-images--outputs">💽 Key Images &amp; Outputs</a></h2>
 <p>Again, what these things are is not too important for the purposes of this guide.</p>
 <p>The important thing to take away is that the these two things (key images &amp; outputs) are additional pieces of data that must be carried over from <code>cold &lt;-&gt; view</code> wallets in order for:</p>
