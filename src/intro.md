@@ -5,7 +5,7 @@ Malvarma is a [cold wallet](https://en.wikipedia.org/wiki/Cryptocurrency_wallet#
 ---
 
 This guide hand-holds you through:
-1. Creating an [air-gapped](https://en.wikipedia.org/wiki/Air_gap_(networking)) computer
+1. Creating an [air-gapped](https://en.wikipedia.org/wiki/Air_gap_(networking)) device
 2. Creating a cold/view Monero wallet pair
 3. Creating, signing, and broadcasting a cold Monero transaction
 

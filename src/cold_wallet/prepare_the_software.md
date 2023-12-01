@@ -1,5 +1,5 @@
 # Prepare the software
-In the next few steps we'll be taking our computer offline _forever_, so we'll be making sure that we have _everything_ we need installed here, beforehand.
+In the next few steps we'll be taking our device offline _forever_, so we'll be making sure that we have _everything_ we need installed here, beforehand.
 
 Most notably, we need wallet software - we'll be using [Monero GUI](https://www.getmonero.org/downloads) in this guide.
 

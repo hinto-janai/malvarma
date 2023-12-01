@@ -40,7 +40,7 @@ There will be a normal file (`malvarma_viewonly` in the picture) and a correspon
 
 ---
 
-Stepping away from the cold computer - we're now switching over to your `view-only` computer (maybe the computer you're using to read this guide?)
+Stepping away from the cold device - we're now switching over to your `view-only` device (maybe the computer you're using to read this guide?)
 
 Plug in your data transfer medium of choice, import the `view-only` wallet files.
 

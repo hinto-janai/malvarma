@@ -9,6 +9,6 @@ It is encouraged to backup your cold wallet in some type of way, whether this me
 
 The many ways to do this are outside the scope of this guide, but they can easily be found by searching around.
 
-**Your seed/cold wallet should never leave your air-gapped computer unencrypted**.
+**Your seed/cold wallet should never leave your air-gapped device unencrypted**.
 
 Use [well-known](https://www.gnupg.org) and [trusted](https://www.veracrypt.fr) encryption software to encrypt your wallet before transferring it to a machine connected to the internet or any other network. Even Monero wallets themselves have built-in password and encryption schemes, use them if needed.

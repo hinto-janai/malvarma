@@ -7,7 +7,7 @@
 
 This computer will never connect to the internet ever again, so make sure you okay with "sacrificing" it into a cold wallet.
 
-You will also need a computer _other_ than this cold computer to act as your `view-only` wallet (perhaps the computer you're using to read this guide?). The security of this computer does not matter as much, as it will not be able to spend any funds.
+You will also need a device _other_ than this cold computer to act as your `view-only` wallet (perhaps the computer you're using to read this guide?). The security of this computer does not matter as much, as it will not be able to spend any funds.
 
 ## 💻 This guide
 

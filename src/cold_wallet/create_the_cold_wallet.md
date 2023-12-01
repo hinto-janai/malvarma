@@ -1,5 +1,5 @@
 # Create the cold wallet
-After booting your newly created air-gapped computer, you should confirm that it _really_ cannot connect to any network before proceeding.
+After booting your newly created air-gapped device, you should confirm that it _really_ cannot connect to any network before proceeding.
 
 ---
 
@@ -29,7 +29,7 @@ The gist is that the seed should never see the internet or any other device unen
 
 Optionally create a wallet password.
 
-Depending on your [threat model](https://en.wikipedia.org/wiki/Threat_model), a password may not be necessary as this computer will be offline forever. The likelihood of you losing this password may be higher than a successful attack occurring to an air-gapped machine.
+Depending on your [threat model](https://en.wikipedia.org/wiki/Threat_model), a password may not be necessary as this device will be offline forever. The likelihood of you losing this password may be higher than a successful attack occurring to an air-gapped machine.
 
 ![image](../img/create_the_cold_wallet_6.jpg)
 
@@ -43,7 +43,7 @@ Confirm your wallet looks correct, then create!
 
 ![image](../img/create_the_cold_wallet_8.jpg)
 
-Now, we have a cold wallet on a cold computer - **this wallet must never leave this device** (at least, unencrypted).
+Now, we have a cold wallet on a cold device - **this wallet must never leave this device** (at least, unencrypted).
 
 The QR Code and Monero address shown would be your cold wallets address.
 

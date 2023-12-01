@@ -2,9 +2,9 @@
 We'll be signing (authorizing) the transaction created in the previous step.
 
 ---
-We're now back on the cold computer.
+We're now back on the cold device.
 
-After plugging in your data transfer medium (USB, SD Card, etc) into your cold computer, goto:
+After plugging in your data transfer medium (USB, SD Card, etc) into your cold device, goto:
 - `Send` tab
 - Advanced options
 - Offline transaction signing
