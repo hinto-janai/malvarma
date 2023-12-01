@@ -10,7 +10,7 @@ Other wallets that support offline transactions can be used (e.g Monero CLI) how
 ## 💾 Install
 
 <p style="background:rgba(255,0,0,0.25);padding:0.75em;">
-<strong>Note:</strong> if <a href="../optional/physical_security.md#-disk-encryption">full disk encryption</a> is desired, that step should be done before any of this, as it cannot easily done after the fact.
+<strong>Note:</strong> if <a href="../optional/physical_security.md#-disk-encryption">full disk encryption</a> is desired, that step should be done before any of this, as it cannot easily be done after the fact.
 </p>
 
 
