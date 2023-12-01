@@ -11,7 +11,7 @@ All the steps here are laid out in other chapters, we will be repeating them.
 ## 📎 Recovering the cold wallet
 
 <p style="background:rgba(255,0,0,0.25);padding:0.75em;">
-Be sure only recover your cold wallet on a properly air-gapped device.
+Be sure to only recover your cold wallet on a properly air-gapped device.
 </p>
 
 On your air-gapped device, go through the standard procedure of creating a Monero wallet, this time selecting `Restore wallet from keys or mnemonic seed`.
