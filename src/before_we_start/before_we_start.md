@@ -1,7 +1,12 @@
 # ⛔️ Before we start
-This guide is meant to be read from front-to-back, in order.
 
+<p style="background:rgba(200,250,155,0.2);padding:0.75em;">
+<strong>This guide is meant to be read from front-to-back, in order.
+<br>
+<br>
 There are steps that may not be applicable to you, if so, feel free to skip them.
+</strong>
+</p>
 
 ---
 

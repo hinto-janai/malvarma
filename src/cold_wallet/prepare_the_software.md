@@ -9,11 +9,14 @@ Other wallets that support offline transactions can be used (e.g Monero CLI) how
 
 ## 💾 Install
 
+<p style="background:rgba(255,0,0,0.25);padding:0.75em;">
+<strong>Note:</strong> if <a href="../optional/physical_security.md#-disk-encryption">full disk encryption</a> is desired, that step should be done before any of this, as it cannot easily done after the fact.
+</p>
+
+
 Make sure your wallet software is installed on your cold device.
 
 If you are using the cold device for purposes [in addition to Monero](../before_we_start/before_we_start.md), you should make that software is installed as well.
-
-If [full disk encryption](../optional/physical_security.md) is desired, that step should be done before any of this as well (you cannot easily do this after the fact).
 
 ![image](../img/prepare_the_software_1.jpg)
 

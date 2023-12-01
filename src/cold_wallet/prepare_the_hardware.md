@@ -6,9 +6,11 @@ If this step is not applicable to your hardware (Desktop, SBC, etc) you can skip
 In that case, using a motherboard or SBC without an integrated WiFi and/or Bluetooth chip would be equivalent to this step.
 
 ## 👋 Goodbye, WiFi
-We're going to be removing the WiFi/Bluetooth chip from the example laptop.
-
+<p style="background:rgba(255,0,0,0.25);padding:0.75em;">
 Be sure to turn off the laptop and unplug any power.
+</p>
+
+We're going to be removing the WiFi/Bluetooth chip from the example laptop.
 
 Most cheap laptops like this will have 9-12 screws on the back, yours may differ slightly, but in the end it's the same - unscrew the back cover and open it up.
 

@@ -18,6 +18,7 @@
 	- [Upgrading the wallet](maintenance/upgrading_the_wallet.md)
 	- [Restoring the cold wallet](maintenance/restoring_the_cold_wallet.md)
 	- [Restoring the view wallet](maintenance/restoring_the_view_wallet.md)
+	- [Restoring from the seed](maintenance/restoring_from_the_seed.md)
 - [⚠️ "Optional"](optional/optional.md)
 	- [Backup the cold wallet](optional/backup_the_cold_wallet.md)
 	- [Physical security](optional/physical_security.md)
