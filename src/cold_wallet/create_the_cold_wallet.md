@@ -33,7 +33,7 @@ Depending on your [threat model](https://en.wikipedia.org/wiki/Threat_model), a 
 
 ![image](../img/create_the_cold_wallet_6.jpg)
 
-When selecting a daemon, select `Connect to a remote node` and do not add anything.
+When selecting a node, select `Connect to a remote node` and do not add anything.
 
 This wallet is offline, so we'll never be starting a Monero node.
 
