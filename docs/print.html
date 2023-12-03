@@ -319,9 +319,11 @@ Be sure to turn off the laptop and unplug any power.
 <p>USB WiFi/Bluetooth adapters exist, your laptop may still have an ethernet port, etc - this is addressed in <a href="cold_wallet/../optional/physical_security.html">Physical security</a></p>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="create-the-cold-wallet"><a class="header" href="#create-the-cold-wallet">Create the cold wallet</a></h1>
-<p>After booting your newly created air-gapped device, you should confirm that it <em>really</em> cannot connect to any network before proceeding.</p>
+<p style="background:rgba(200,250,155,0.2);padding:0.75em;">
+After booting your newly created air-gapped device, you should confirm that it really <strong>cannot</strong> connect to any network before proceeding.
+</p>
 <hr />
-<p>After confirming your machine is cold, we'll be going through the standard procedure of making a wallet with Monero GUI, just follow the steps.</p>
+<p>We'll now be going through the standard procedure of making a (cold) wallet with Monero GUI, just follow the steps.</p>
 <p><img src="cold_wallet/../img/create_the_cold_wallet_1.jpg" alt="image" /></p>
 <p>When selecting a mode, be sure to select <code>Advanced mode</code>.</p>
 <p>This must be selected to enable certain offline transaction functionality.</p>
@@ -356,7 +358,7 @@ Be sure to turn off the laptop and unplug any power.
 </ul>
 <p>but is <strong>not</strong> allowed to sign transactions (aka, spend funds).</p>
 <p>This <code>view-only</code> wallet can be placed on a &quot;hot&quot; machine, and you can be more relaxed with it, as it cannot spend funds.</p>
-<hr />
+<h2 id="-creating-the-view-only-wallet"><a class="header" href="#-creating-the-view-only-wallet">👁 Creating the <code>view-only</code> wallet</a></h2>
 <p>In your cold wallet, goto:</p>
 <ul>
 <li>Settings</li>
@@ -374,16 +376,15 @@ Be sure to turn off the laptop and unplug any power.
 <p><strong>Only the view-only wallet.</strong></p>
 <p>There will be a normal file (<code>malvarma_viewonly</code> in the picture) and a corresponding <code>.keys</code> version, only the <code>.keys</code> version is required but you can copy both.</p>
 <p><img src="cold_wallet/../img/create_the_view_wallet_3.jpg" alt="image" /></p>
-<hr />
+<h2 id="-importing-the-view-only-wallet"><a class="header" href="#-importing-the-view-only-wallet">📥 Importing the <code>view-only</code> wallet</a></h2>
 <p>Stepping away from the cold device - we're now switching over to your <code>view-only</code> device (maybe the computer you're using to read this guide?)</p>
 <p>Plug in your data transfer medium of choice, import the <code>view-only</code> wallet files.</p>
 <p><img src="cold_wallet/../img/create_the_view_wallet_4.jpg" alt="image" /></p>
 <p>The <code>view-only</code> wallet files should be placed where your Monero GUI looks for wallet files, again by default this is in:</p>
 <pre><code>C:\Users\HOT_COMPUTER\Documents\Monero\wallets\YOUR_WALLET
 </code></pre>
-<p>If you don't know where Monero GUI looks for wallet files, that's fine, it will allow you to select them.</p>
-<hr />
-<p>Re-create the <code>view-only</code> wallet by selecting <code>Open a wallet from file</code>.</p>
+<p>If you don't know where Monero GUI looks for wallet files, that's fine, it will allow you to select them in the next step.</p>
+<p>Import the <code>view-only</code> wallet by selecting <code>Open a wallet from file</code>.</p>
 <p><img src="cold_wallet/../img/create_the_view_wallet_5.jpg" alt="image" /></p>
 <p>There's our <code>view-only</code> wallet, select it and open.</p>
 <p><img src="cold_wallet/../img/create_the_view_wallet_6.jpg" alt="image" /></p>
@@ -391,7 +392,7 @@ Be sure to turn off the laptop and unplug any power.
 <p>Make sure the address is the same as your cold wallet.</p>
 <p>Note that in the top-left corner, a <code>View Only</code> marker appears.</p>
 <p>From now on, if you're ever confused on which wallet we're dealing with in the guide, look for the <code>View Only</code> marker.</p>
-<hr />
+<h2 id="-syncing-the-view-only-wallet"><a class="header" href="#-syncing-the-view-only-wallet">⏳ Syncing the <code>view-only</code> wallet</a></h2>
 <p>To view funds sent to this wallet, you'll be syncing this <code>view-only</code> wallet just like you would for a regular wallet.</p>
 <p><img src="cold_wallet/../img/create_the_view_wallet_7.jpg" alt="image" /></p>
 <p>Fast forward some amount of time.</p>
@@ -444,7 +445,7 @@ Be sure to turn off the laptop and unplug any power.
 <p><img src="transactions/../img/sign_the_transaction_2.jpg" alt="image" /></p>
 <p>Confirm the details of this transaction.</p>
 <p>There may be unknown addresses shown due to <a href="https://www.getmonero.org/resources/moneropedia/stealthaddress.html">stealth addresses</a> and <a href="https://www.getmonero.org/resources/moneropedia/change.html">change addresses</a> but the address you are sending to should be specified.</p>
-<p>In our case, we are indeed sending <code>0.49 XMR</code> to <code>44hinto...15ZPHmK</code>.</p>
+<p>In our case, we are indeed sending <code>0.49 XMR</code> to <code>44hinto...7Vi9CTW</code>.</p>
 <p><img src="transactions/../img/sign_the_transaction_3.jpg" alt="image" /></p>
 <p>After signing (authorizing) the transaction, there will be <code>_signed</code> and <code>_signed_keyImages</code> versions of your transaction file.</p>
 <p>The <code>_signed</code> file is a &quot;ready-to-go&quot; transaction that can be broadcasted and successfully accepted by the Monero network, like a signed check with a name and amount.</p>
@@ -464,7 +465,7 @@ Be sure to turn off the laptop and unplug any power.
 </ul>
 <p><img src="transactions/../img/broadcast_the_transaction_1.jpg" alt="image" /></p>
 <p>Find the <code>_signed</code> version of your transaction on your data transfer medium, and select it.</p>
-<p>If the <code>signed_keyImages</code> file is in the same folder, Monero GUI will automatically import that as well.</p>
+<p>If the <code>_signed_keyImages</code> file is in the same folder, Monero GUI will automatically import that as well.</p>
 <p>If it is not, you will have to manually use the:</p>
 <ul>
 <li><code>Send</code> tab</li>
@@ -476,9 +477,9 @@ Be sure to turn off the laptop and unplug any power.
 <p><img src="transactions/../img/broadcast_the_transaction_2.jpg" alt="image" /></p>
 <p>The wallet has accepted the signed transaction file, and our money was successfully sent!</p>
 <p><img src="transactions/../img/broadcast_the_transaction_3.jpg" alt="image" /></p>
-<p>We can see in our <code>view-only</code> wallet that we've sent the money to <code>44hintoF...z7Vi9CYW</code>.</p>
+<p>We can see in our <code>view-only</code> wallet that we've sent the money to <code>44hinto...7Vi9CYW</code>.</p>
 <p><img src="transactions/../img/broadcast_the_transaction_4.jpg" alt="image" /></p>
-<p>Sometime later, the actual <code>44hintoF...z7Vi9CYW</code> wallet will receive the money, as seen below.</p>
+<p>Sometime later, the actual <code>44hinto...7Vi9CYW</code> wallet will receive the money, as seen below.</p>
 <p>Congratulations, you've successfully created, signed, and broadcasted a cold Monero transaction!</p>
 <p>There's only 1 step left: <a href="transactions/outputs.html"><code>Outputs</code></a>.</p>
 <p><img src="transactions/../img/broadcast_the_transaction_5.jpg" alt="image" /></p>
@@ -512,7 +513,7 @@ Be sure to turn off the laptop and unplug any power.
 <p>After this is done, your cold wallet's balance will be updated and will be able to sign future transactions.</p>
 <p>Consider deleting all the non-wallet files created up until this point (transaction, signed, key image, output) as they are no longer required.</p>
 <p><img src="transactions/../img/outputs_4.jpg" alt="image" /></p>
-<h2 id="end"><a class="header" href="#end">End?</a></h2>
+<h2 id="-end"><a class="header" href="#-end">🤔 End?</a></h2>
 <p>This is the end of the main part of the guide - everything beyond this is technically optional, although it's recommended to continue reading.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="-maintenance"><a class="header" href="#-maintenance">🔨 Maintenance</a></h1>
 <p>This cold/view-only wallet setup will require some small maintenance over time.</p>
@@ -617,7 +618,7 @@ Be sure to only recover your cold wallet on a properly air-gapped device.
 <h2 id="-misc-ports"><a class="header" href="#-misc-ports">🔌 Misc ports</a></h2>
 <p>Your air-gapped machine may or may not have usable USB ports (that <code>USB WiFi</code> dongles could be plugged into) and/or Ethernet ports.</p>
 <p><strong>Do not plug anything into them.</strong></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="end-1"><a class="header" href="#end-1">End</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="end"><a class="header" href="#end">End</a></h1>
 <h3 id="congratulations-on-creating-an-air-gapped-device-and-sending-cold-monero-"><a class="header" href="#congratulations-on-creating-an-air-gapped-device-and-sending-cold-monero-">Congratulations on creating an air-gapped device and sending cold Monero 🎉</a></h3>
 <p>To send more transactions, repeat the steps in the <a href="../transactions/transactions.html"><code>Transactions</code></a> chapter.</p>
 </br>
@@ -625,7 +626,7 @@ Be sure to only recover your cold wallet on a properly air-gapped device.
 </br>
 </br>
 <div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
-<tr><td>Last updated</td><td><code>2023-12-01</code> <code>1701455539</code></td></tr>
+<tr><td>Last updated</td><td><code>2023-12-03</code> <code>1701610765</code></td></tr>
 <tr><td>Monero GUI version</td><td><code>v0.18.3.1</code> <code>bea3032df9b1fc59a7aa0a3489d583b389481cfe</code></td></tr>
 <tr><td>Source</td><td><a href="https://github.com/hinto-janai/malvarma">https://github.com/hinto-janai/malvarma</a></td></tr>
 </tbody></table>
