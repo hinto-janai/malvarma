@@ -17,7 +17,7 @@ Goto:
 
 Find the `_signed` version of your transaction on your data transfer medium, and select it.
 
-If the `signed_keyImages` file is in the same folder, Monero GUI will automatically import that as well.
+If the `_signed_keyImages` file is in the same folder, Monero GUI will automatically import that as well.
 
 If it is not, you will have to manually use the:
 - `Send` tab
@@ -33,11 +33,11 @@ The wallet has accepted the signed transaction file, and our money was successfu
 
 ![image](../img/broadcast_the_transaction_3.jpg)
 
-We can see in our `view-only` wallet that we've sent the money to `44hintoF...z7Vi9CYW`.
+We can see in our `view-only` wallet that we've sent the money to `44hinto...7Vi9CYW`.
 
 ![image](../img/broadcast_the_transaction_4.jpg)
 
-Sometime later, the actual `44hintoF...z7Vi9CYW` wallet will receive the money, as seen below.
+Sometime later, the actual `44hinto...7Vi9CYW` wallet will receive the money, as seen below.
 
 Congratulations, you've successfully created, signed, and broadcasted a cold Monero transaction!
 

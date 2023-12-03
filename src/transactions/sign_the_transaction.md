@@ -22,7 +22,7 @@ Confirm the details of this transaction.
 
 There may be unknown addresses shown due to [stealth addresses](https://www.getmonero.org/resources/moneropedia/stealthaddress.html) and [change addresses](https://www.getmonero.org/resources/moneropedia/change.html) but the address you are sending to should be specified.
 
-In our case, we are indeed sending `0.49 XMR` to `44hinto...15ZPHmK`.
+In our case, we are indeed sending `0.49 XMR` to `44hinto...7Vi9CTW`.
 
 ![image](../img/sign_the_transaction_3.jpg)
 

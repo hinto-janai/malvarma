@@ -1,9 +1,11 @@
 # Create the cold wallet
-After booting your newly created air-gapped device, you should confirm that it _really_ cannot connect to any network before proceeding.
+<p style="background:rgba(200,250,155,0.2);padding:0.75em;">
+After booting your newly created air-gapped device, you should confirm that it really <strong>cannot</strong> connect to any network before proceeding.
+</p>
 
 ---
 
-After confirming your machine is cold, we'll be going through the standard procedure of making a wallet with Monero GUI, just follow the steps.
+We'll now be going through the standard procedure of making a (cold) wallet with Monero GUI, just follow the steps.
 
 ![image](../img/create_the_cold_wallet_1.jpg)
 

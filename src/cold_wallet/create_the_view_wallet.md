@@ -9,7 +9,7 @@ but is **not** allowed to sign transactions (aka, spend funds).
 
 This `view-only` wallet can be placed on a "hot" machine, and you can be more relaxed with it, as it cannot spend funds.
 
----
+## 👁 Creating the `view-only` wallet
 
 In your cold wallet, goto:
 - Settings
@@ -38,7 +38,7 @@ There will be a normal file (`malvarma_viewonly` in the picture) and a correspon
 
 ![image](../img/create_the_view_wallet_3.jpg)
 
----
+## 📥 Importing the `view-only` wallet
 
 Stepping away from the cold device - we're now switching over to your `view-only` device (maybe the computer you're using to read this guide?)
 
@@ -50,11 +50,9 @@ The `view-only` wallet files should be placed where your Monero GUI looks for wa
 ```
 C:\Users\HOT_COMPUTER\Documents\Monero\wallets\YOUR_WALLET
 ```
-If you don't know where Monero GUI looks for wallet files, that's fine, it will allow you to select them.
+If you don't know where Monero GUI looks for wallet files, that's fine, it will allow you to select them in the next step.
 
----
-
-Re-create the `view-only` wallet by selecting `Open a wallet from file`.
+Import the `view-only` wallet by selecting `Open a wallet from file`.
 
 ![image](../img/create_the_view_wallet_5.jpg)
 
@@ -70,7 +68,7 @@ Note that in the top-left corner, a `View Only` marker appears.
 
 From now on, if you're ever confused on which wallet we're dealing with in the guide, look for the `View Only` marker.
 
----
+## ⏳ Syncing the `view-only` wallet
 
 To view funds sent to this wallet, you'll be syncing this `view-only` wallet just like you would for a regular wallet.
 

@@ -41,6 +41,6 @@ Consider deleting all the non-wallet files created up until this point (transact
 
 ![image](../img/outputs_4.jpg)
 
-## End?
+## 🤔 End?
 
 This is the end of the main part of the guide - everything beyond this is technically optional, although it's recommended to continue reading.
