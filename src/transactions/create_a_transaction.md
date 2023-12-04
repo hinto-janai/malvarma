@@ -7,7 +7,7 @@ Goto:
 - `Send` tab
 - Advanced options
 - Offline transaction signing
-- Click `Submit`
+- Click `Create`
 
 ![image](../img/create_a_transaction_1.jpg)
 
